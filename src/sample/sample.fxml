@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" style="-fx-border-color: #8b2ad6;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="178.0" style="-fx-background-color: #8b2ad6;">
+         <children>
+            <Label layoutX="18.0" layoutY="32.0" text="Live Wired" textFill="#f5f0f0">
+               <font>
+                  <Font name="Century Gothic" size="29.0" />
+               </font>
+            </Label>
+            <Button id="monitorButton" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: limegreen;" text="Monitor ON" textFill="#fffdfd" />
+         </children>
+      </Pane>
+      <Pane id="topPanel" layoutX="178.0" prefHeight="30.0" prefWidth="846.0" style="-fx-background-color: #8b2ad6;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="827.0" layoutY="6.0" text="X" textFill="#f5f2f2" />
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </Pane>
+      <Label layoutX="218.0" layoutY="59.0" prefHeight="47.0" prefWidth="178.0" text="Monitored Hosts">
+         <font>
+            <Font name="Century Gothic" size="22.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" fill="#cdc9c9" layoutX="319.0" layoutY="106.0" startX="-100.0" stroke="#6b6969" strokeMiterLimit="5.0" strokeWidth="0.5" />
+      <Button id="newDomain" layoutX="888.0" layoutY="62.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" style="-fx-background-color: limegreen;" text="Add New Domain" textFill="#f5f3f3">
+         <effect>
+            <DropShadow height="12.1" radius="9.2575" width="26.93" />
+         </effect></Button>
+      <Line endX="400.0" layoutX="316.0" layoutY="659.0" startX="-100.0" strokeLineCap="ROUND">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#911dbf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Label layoutX="211.0" layoutY="669.0" text=" © Copyright 2018, All rights reserved." />
+      <TableView layoutX="218.0" layoutY="141.0" prefHeight="483.0" prefWidth="780.0">
+        <columns>
+          <TableColumn prefWidth="585.0" text="HOST" />
+          <TableColumn minWidth="0.0" prefWidth="194.0" text="STATUS" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
